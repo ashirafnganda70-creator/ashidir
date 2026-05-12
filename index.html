@@ -1,0 +1,238 @@
+export default function ShuffleLuxuryDemo() { return ( <div className="min-h-screen bg-black text-white overflow-hidden font-sans"> {/* HERO */} <section className="relative h-screen flex items-center justify-center"> <video
+autoPlay
+muted
+loop
+playsInline
+className="absolute inset-0 w-full h-full object-cover opacity-40"
+src="https://cdn.coverr.co/videos/coverr-man-getting-a-haircut-1561271521599?download=1080p"
+/>
+
+<div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black" />
+
+    <div className="relative z-10 text-center px-6 max-w-5xl">
+      <div className="mb-6 flex justify-center">
+        <div className="w-28 h-28 rounded-full border-4 border-red-600 bg-black flex items-center justify-center shadow-2xl shadow-red-700/50">
+          <span className="text-3xl font-bold tracking-widest">S</span>
+        </div>
+      </div>
+
+      <h1 className="text-6xl md:text-8xl font-black tracking-tight leading-none mb-6">
+        SHUFFLE
+        <span className="block text-red-600">GENTS BARBER</span>
+      </h1>
+
+      <p className="text-gray-300 text-lg md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed">
+        Premium grooming experience crafted for modern gentlemen. Luxury cuts,
+        elite fades, beard artistry, and cinematic style.
+      </p>
+
+      <div className="flex flex-col md:flex-row items-center justify-center gap-5">
+        <button className="px-10 py-4 bg-red-600 hover:bg-red-700 transition rounded-full text-lg font-bold shadow-2xl shadow-red-700/40">
+          BOOK NOW
+        </button>
+
+        <button className="px-10 py-4 border border-white/40 hover:bg-white hover:text-black transition rounded-full text-lg font-semibold">
+          VIEW STYLES
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {/* STATS */}
+  <section className="py-24 px-6 bg-zinc-950">
+    <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      {[
+        ["10K+", "Satisfied Clients"],
+        ["5★", "Luxury Experience"],
+        ["24/7", "Online Booking"],
+        ["100%", "Premium Grooming"],
+      ].map(([title, sub], index) => (
+        <div
+          key={index}
+          className="bg-black border border-white/10 rounded-3xl p-8 text-center hover:border-red-600 transition"
+        >
+          <h2 className="text-4xl font-black text-red-600 mb-2">{title}</h2>
+          <p className="text-gray-400">{sub}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* SERVICES */}
+  <section className="py-28 px-6 relative">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <p className="text-red-600 uppercase tracking-[0.4em] mb-4 text-sm">
+          SERVICES
+        </p>
+        <h2 className="text-5xl md:text-6xl font-black mb-6">
+          Crafted For Style
+        </h2>
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          Every cut is precision-built for confidence, elegance, and modern luxury.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Luxury Haircuts",
+            image:
+              "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop",
+          },
+          {
+            title: "Elite Beard Styling",
+            image:
+              "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?q=80&w=1200&auto=format&fit=crop",
+          },
+          {
+            title: "Modern Fade Art",
+            image:
+              "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop",
+          },
+        ].map((service, index) => (
+          <div
+            key={index}
+            className="group overflow-hidden rounded-[32px] bg-zinc-950 border border-white/10 hover:border-red-600 transition-all duration-500"
+          >
+            <div className="h-96 overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div className="p-8">
+              <h3 className="text-3xl font-bold mb-4">{service.title}</h3>
+              <p className="text-gray-400 leading-relaxed">
+                Precision-crafted grooming services with luxury finishing and premium care.
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* EXPERIENCE */}
+  <section className="py-28 px-6 bg-zinc-950 relative overflow-hidden">
+    <div className="absolute -top-32 -left-32 w-96 h-96 bg-red-700/20 rounded-full blur-3xl" />
+    <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-red-700/20 rounded-full blur-3xl" />
+
+    <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div>
+        <p className="text-red-600 uppercase tracking-[0.4em] mb-4 text-sm">
+          EXPERIENCE
+        </p>
+        <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+          Grooming
+          <span className="block text-red-600">Redefined</span>
+        </h2>
+
+        <p className="text-gray-300 text-lg leading-relaxed mb-10">
+          Shuffle Gents Barber is designed for men who demand more than a haircut.
+          From luxury interiors to elite styling precision, every visit becomes an experience.
+        </p>
+
+        <div className="space-y-5">
+          {[
+            "Luxury modern atmosphere",
+            "Online appointments",
+            "Premium fade specialists",
+            "VIP client treatment",
+          ].map((item, i) => (
+            <div key={i} className="flex items-center gap-4">
+              <div className="w-3 h-3 rounded-full bg-red-600" />
+              <p className="text-xl">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative">
+        <img
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1400&auto=format&fit=crop"
+          alt="Barber"
+          className="rounded-[40px] shadow-2xl"
+        />
+
+        <div className="absolute -bottom-8 -left-8 bg-black border border-red-600 rounded-3xl p-6 shadow-2xl shadow-red-700/30">
+          <h3 className="text-4xl font-black text-red-600">VIP</h3>
+          <p className="text-gray-400">Luxury Men Grooming</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* GALLERY */}
+  <section className="py-28 px-6">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <p className="text-red-600 uppercase tracking-[0.4em] mb-4 text-sm">
+          GALLERY
+        </p>
+        <h2 className="text-5xl md:text-6xl font-black">
+          Signature Looks
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-6">
+        {[
+          "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1512690459411-b0fd1c86b8b8?q=80&w=1200&auto=format&fit=crop",
+          "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=1200&auto=format&fit=crop",
+        ].map((img, index) => (
+          <div key={index} className="overflow-hidden rounded-[32px] group">
+            <img
+              src={img}
+              className="w-full h-[500px] object-cover group-hover:scale-110 transition duration-700"
+              alt="Style"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section className="py-32 px-6 relative text-center overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-red-700/30 via-black to-red-700/30" />
+
+    <div className="relative z-10 max-w-4xl mx-auto">
+      <h2 className="text-5xl md:text-7xl font-black leading-tight mb-8">
+        Step Into
+        <span className="block text-red-600">Luxury Grooming</span>
+      </h2>
+
+      <p className="text-gray-300 text-xl mb-10 leading-relaxed">
+        Book your next premium grooming session and experience elite barber craftsmanship.
+      </p>
+
+      <button className="px-12 py-5 bg-red-600 hover:bg-red-700 transition rounded-full text-xl font-bold shadow-2xl shadow-red-700/50">
+        BOOK YOUR SESSION
+      </button>
+    </div>
+  </section>
+
+  {/* FOOTER */}
+  <footer className="border-t border-white/10 py-10 px-6 text-center bg-black">
+    <h3 className="text-2xl font-black tracking-widest mb-3">
+      SHUFFLE GENTS BARBER
+    </h3>
+
+    <p className="text-gray-500">
+      Premium Grooming Experience • Kuwait
+    </p>
+  </footer>
+
+  {/* FLOATING WHATSAPP */}
+  <a
+    href="#"
+    className="fixed bottom-6 right-6 bg-green-500 hover:scale-110 transition w-16 h-16 rounded-full flex items-center justify-center shadow-2xl text-3xl"
+  >
+    💬
+  </a>
+</div>
+
+); }
