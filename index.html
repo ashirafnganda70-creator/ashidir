@@ -1,0 +1,174 @@
+export default function EliteFitnessDemo() { return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Hero Section */} <section className="relative h-screen bg-cover bg-center flex items-center justify-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop')", }} > <div className="absolute inset-0 bg-black/70"></div>
+
+<div className="relative z-10 text-center px-6">
+      <h1 className="text-5xl md:text-7xl font-bold tracking-wide uppercase">
+        Elite Fitness
+      </h1>
+
+      <p className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto">
+        Premium gym experience with modern training, personal coaching,
+        and high-performance fitness programs.
+      </p>
+
+      <div className="mt-8 flex flex-col md:flex-row gap-4 justify-center">
+        <a
+          href="https://wa.me/96500000000"
+          target="_blank"
+          className="px-8 py-4 rounded-full bg-green-500 hover:bg-green-600 transition text-black font-bold"
+        >
+          WhatsApp Us
+        </a>
+
+        <a
+          href="https://instagram.com/elitefitness"
+          target="_blank"
+          className="px-8 py-4 rounded-full border border-white hover:bg-white hover:text-black transition font-bold"
+        >
+          Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* Membership Plans */}
+  <section className="py-20 px-6 bg-zinc-950">
+    <h2 className="text-4xl font-bold text-center mb-14">
+      Membership Plans
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {[
+        {
+          title: "Basic",
+          price: "19 KD",
+          features: ["Gym Access", "Locker Access", "Free WiFi"],
+        },
+        {
+          title: "Pro",
+          price: "39 KD",
+          features: [
+            "Gym Access",
+            "Personal Trainer",
+            "Protein Bar Access",
+          ],
+        },
+        {
+          title: "Elite",
+          price: "59 KD",
+          features: [
+            "24/7 Access",
+            "VIP Training",
+            "Private Coaching",
+          ],
+        },
+      ].map((plan, index) => (
+        <div
+          key={index}
+          className="bg-zinc-900 rounded-3xl p-8 border border-zinc-800 hover:border-green-500 transition"
+        >
+          <h3 className="text-2xl font-bold">{plan.title}</h3>
+          <p className="text-4xl font-black mt-4">{plan.price}</p>
+
+          <ul className="mt-6 space-y-3 text-gray-300">
+            {plan.features.map((feature, i) => (
+              <li key={i}>✓ {feature}</li>
+            ))}
+          </ul>
+
+          <button className="w-full mt-8 bg-white text-black py-3 rounded-full font-bold hover:bg-green-500 transition">
+            Join Now
+          </button>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Trainers */}
+  <section className="py-20 px-6 bg-black">
+    <h2 className="text-4xl font-bold text-center mb-14">
+      Meet Our Trainers
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {[
+        {
+          name: "Ahmed",
+          role: "Strength Coach",
+          image:
+            "https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          name: "Sarah",
+          role: "Fitness Trainer",
+          image:
+            "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          name: "Omar",
+          role: "Bodybuilding Coach",
+          image:
+            "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1200&auto=format&fit=crop",
+        },
+      ].map((trainer, index) => (
+        <div
+          key={index}
+          className="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800"
+        >
+          <img
+            src={trainer.image}
+            alt={trainer.name}
+            className="h-80 w-full object-cover"
+          />
+
+          <div className="p-6">
+            <h3 className="text-2xl font-bold">{trainer.name}</h3>
+            <p className="text-gray-400 mt-2">{trainer.role}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Member Area */}
+  <section className="py-20 px-6 bg-zinc-950">
+    <div className="max-w-xl mx-auto bg-zinc-900 rounded-3xl p-10 border border-zinc-800">
+      <h2 className="text-3xl font-bold text-center mb-8">
+        Member Login Area
+      </h2>
+
+      <form className="space-y-5">
+        <input
+          type="email"
+          placeholder="Email Address"
+          className="w-full p-4 rounded-xl bg-black border border-zinc-700"
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          className="w-full p-4 rounded-xl bg-black border border-zinc-700"
+        />
+
+        <button
+          type="submit"
+          className="w-full py-4 rounded-xl bg-green-500 text-black font-bold hover:bg-green-600 transition"
+        >
+          Login
+        </button>
+      </form>
+
+      <p className="text-gray-400 text-sm mt-6 text-center">
+        Members can access training schedules, plans, bookings, and gym updates.
+      </p>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="py-10 text-center border-t border-zinc-800 bg-black">
+    <p className="text-gray-500">
+      © 2026 Elite Fitness Kuwait. All rights reserved.
+    </p>
+  </footer>
+</div>
+
+); }
